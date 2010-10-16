@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>Test</title>
+</head>
+
+<body>
+  <div id="test" style="width: 200px; height: 200px; background: url('http://www.google.com/intl/en_com/images/srpr/logo1w.png') no-repeat -20px -40px;">
+    
+  </div>
+  <script src="jquery.js"></script>
+  <script src="../jquery.backgroundXY.js"></script>
+  <script>
+    $(function(){
+      //console.log('X before: ', $('#test').css('backgroundPositionX'))
+      //console.log('Y before: ', $('#test').css('backgroundPositionY'))
+      $('#test').css('backgroundPositionX', 0);
+      //console.log('X after: ', $('#test').css('backgroundPositionX'))
+      //console.log('Y before: ', $('#test').css('backgroundPositionY'))
+      $('#test').css('backgroundPositionY', 0);
+      //console.log('Y after: ', $('#test').css('backgroundPositionY'))
+      $('#test')
+        .animate({backgroundPositionX: '-100px'}, 'slow')
+        .animate({backgroundPositionY: '-100px'}, 'slow');
+    });
+  </script>
+</body>
+</html>

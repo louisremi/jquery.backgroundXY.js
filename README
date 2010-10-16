@@ -1,0 +1,10 @@
+This plugin requires jQuery >= 1.4.3
+
+Usage:
+------
+
+$('#myDiv').css('backgroundPositionX', '-90px');
+$('#myDiv').css('backgroundPositionY', '-120px');
+$('#myDiv')
+  .animate({backgroundPositionX: 0})
+  .animate({backgroundPositionY: 0});
