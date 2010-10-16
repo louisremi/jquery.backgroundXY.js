@@ -1,3 +1,13 @@
+/*
+ * backgroundXY: A jQuery cssHooks implementing background-position-X and background-position-Y in browsers lacking it.
+ *
+ * Copyright (c) 2010 Louis-Rémi Babé
+ * Licensed under the MIT license.
+ * 
+ * This saved you an hour of work? 
+ * Send me music http://www.amazon.fr/wishlist/HNTU0468LQON
+ *
+ */
 (function($) {
 
 var div = document.createElement('div'),
