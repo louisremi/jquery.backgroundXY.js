@@ -32,5 +32,6 @@ if (div.style.backgroundPositionX !== '') {
     }
   });
 }
+div = null;
 
 })(jQuery);
