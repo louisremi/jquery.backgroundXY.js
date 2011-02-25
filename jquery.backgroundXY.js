@@ -26,12 +26,14 @@ if (div.style.backgroundPositionX !== '') {
         elem.style.backgroundPosition = (isX? value + ' ' : '' ) + (current? current.match(rposition)[isX+1] : '0') + (isX? '' : ' ' + value);
       },
       get: function( elem, computed ) {
-        var current = elem.style.backgroundPosition;
-        return current? current.match(rposition)[!isX+1] : '0';
+        var current = computed?
+          $.css( elem, 'backgroundPosition' ):
+          elem.style.backgroundPosition;
+        return current.match(rposition)[!isX+1];
       }
     };
     $.fx.step[property] = function( fx ) {
-      $.cssHooks[property].set( fx.elem, fx.now + fx.unit);
+      $.cssHooks[property].set( fx.elem, fx.now + fx.unit );
     }
   });
 }
